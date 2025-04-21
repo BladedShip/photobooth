@@ -19,7 +19,7 @@ export const generatePhotoStrip = async (images: { url: string; filter: string }
 
   // Set dimensions for the photo strip (closer to 2x6 inch ratio at 300 DPI)
   const width = 600
-  const height = 1800
+  const height = 1700
   canvas.width = width
   canvas.height = height
 
@@ -124,14 +124,14 @@ export const generatePhotoStrip = async (images: { url: string; filter: string }
     }
 
     // Footer Section
-    const footerStartY = height - 100 // Move footer slightly up
-    ctx.font = '24px Poppins' // Adjust font as needed
-    ctx.fillStyle = '#AAAAAA' // Lighter gray
+    const footerStartY = height - 80 // Reduced from 100 to 60
+    ctx.font = '20px Poppins' // Reduced from 24px
+    ctx.fillStyle = '#AAAAAA'
     ctx.fillText('FIND YOUR PHOTOS AT', width / 2, footerStartY)
     
-    ctx.font = '28px Poppins' // Adjust font as needed
-    ctx.fillStyle = '#888888' // Slightly darker gray
-    ctx.fillText('WWW.PHOTOBOOTH.APP', width / 2, footerStartY + 35) // Reduce the offset from 50 to 35
+    ctx.font = '22px Poppins' // Reduced from 28px
+    ctx.fillStyle = '#888888'
+    ctx.fillText('WWW.KUTTI.LINK (NOT REALLY)', width / 2, footerStartY + 25) // Reduced from 35
 
     // Convert canvas to PNG
     return canvas.toDataURL('image/png')

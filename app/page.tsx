@@ -5,14 +5,12 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-white text-gray-900 font-[family-name:var(--font-geist-sans)]">
       <header className="flex justify-end items-center p-4 sm:p-6">
-        {/* Removed top-left Camera icon */}
-        {/* Removed user icon placeholder */}
       </header>
 
       <main className="flex flex-col flex-grow items-center justify-center text-center p-8 gap-6">
         <div className="flex items-center gap-4">
           <Camera size={48} />
-          <h1 className="text-4xl sm:text-5xl font-bold">PhotoStrip</h1>
+          <h1 className="text-4xl sm:text-5xl font-bold">PhotoBooth</h1>
         </div>
         <p className="text-lg sm:text-xl text-gray-600">
           Capture 3 moments, get 1 instant print.
@@ -26,10 +24,10 @@ export default function Home() {
 
       <footer className="flex justify-between items-center p-4 sm:p-6 text-sm text-gray-500">
         <div>
-          <span>PhotoStrip App</span>
+          <span>Vendel ittech  po</span>
         </div>
         <div>
-          <span>Made with ❤️</span>
+          <span>Made with 🍑💦</span>
         </div>
       </footer>
     </div>

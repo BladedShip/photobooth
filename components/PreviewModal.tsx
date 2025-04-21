@@ -30,16 +30,9 @@ const PreviewModal: React.FC<PreviewModalProps> = ({
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-white rounded-lg p-6 relative"
+          className="bg-white rounded-lg p-4 sm:p-6 relative flex flex-col items-center gap-4 sm:gap-6 
+                     w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl max-h-[90vh]"
           onClick={e => e.stopPropagation()}
-          style={{
-            maxHeight: '90vh',
-            width: 'auto',
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '1.5rem'
-          }}
         >
           <button
             onClick={onClose}
@@ -48,28 +41,18 @@ const PreviewModal: React.FC<PreviewModalProps> = ({
             <X size={20} />
           </button>
 
-          <div className="flex flex-col items-center gap-6">
-            <h2 className="text-2xl font-semibold">Preview</h2>
+          <div className="flex flex-col items-center gap-4 sm:gap-6 w-full">
+            <h2 className="text-xl sm:text-2xl font-semibold text-black">Preview</h2>
             
             <div 
-              className="relative overflow-hidden"
-              style={{
-                height: '70vh',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center'
-              }}
+              className="relative overflow-hidden border border-black shadow-lg h-[50vh] sm:h-[60vh] md:h-[65vh] 
+                         flex items-center justify-center w-auto"
+              style={{ transform: 'rotate(-3deg) scale(0.95)' }}
             >
               <img
                 src={imageUrl}
                 alt="Photo Strip Preview"
-                style={{
-                  height: '100%',
-                  width: 'auto',
-                  objectFit: 'contain',
-                  borderRadius: '0.5rem',
-                  boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)'
-                }}
+                className="h-full w-auto object-contain rounded-md shadow-sm"
               />
             </div>
 
@@ -78,7 +61,7 @@ const PreviewModal: React.FC<PreviewModalProps> = ({
                 e.preventDefault()
                 onDownload()
               }}
-              className="bg-black text-white px-8 py-3 rounded-lg font-medium hover:bg-gray-800 transition-colors"
+              className="bg-black text-white px-6 py-2 sm:px-8 sm:py-3 rounded-lg font-medium text-sm sm:text-base hover:bg-gray-800 transition-colors"
             >
               Download Photo Strip
             </button>
